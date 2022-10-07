@@ -1,6 +1,31 @@
 {
   "dependencies": {
+    "connect": "^3.7.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1"
-  }
+  },
+  "name": "comp229.005.f2022",
+  "description": "COMP229 Code Examples",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chungyintsang/COMP229.005.F2022.git"
+  },
+  "keywords": [
+    "COMP229.005",
+    "MEAN",
+    "Express",
+    "EJS",
+    "NodeJS"
+  ],
+  "author": "Chung Yin Tsang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chungyintsang/COMP229.005.F2022/issues"
+  },
+  "homepage": "https://github.com/chungyintsang/COMP229.005.F2022#readme"
 }
