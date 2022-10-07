@@ -1,0 +1,1 @@
+console.log("It goes to the client-side.")
