@@ -1,4 +1,4 @@
 # COMP229.005.F2022
- COMP229 Code Examples
-
-by Chung Yin Tsang
+// Student ID: 301216704
+// Name: Chung Yin Tsang
+// Date: 7 Oct 2022

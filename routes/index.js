@@ -6,44 +6,43 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' , name: 'Julio'});
+  res.render('index', 
+  { 
+    title: 'Home'
+  });
 });
 
 router.get('/projects', function(req, res, next) {
   res.render(
-    'index', 
+    'projects', 
     { 
-      title: 'Projects',
-      name: 'Julio' 
+      title: 'Projects' 
     });
 });
 
 router.get('/services', function(req, res, next) {
   res.render(
-    'projectservices', 
+    'services', 
     { 
-      title: 'Services',
+      title: 'Services'
     }
   );
 });
 
 router.get('/about', function(req, res, next) {
   res.render(
-    'index', 
+    'about', 
     { 
-      title: 'About Me',
-      name: 'Julio' 
+      title: 'About Me'
     });
 });
 
 
-
 router.get('/contact', function(req, res, next) {
   res.render(
-    'index', 
+    'contact', 
     { 
       title: 'Contact',
-      name: 'Julio' 
     });
 });
 

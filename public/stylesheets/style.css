@@ -10,6 +10,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .footer {
@@ -21,6 +22,6 @@ body {
   background-color: #f5f5f5;
 }
 
-.flash {
-  color: red;
+.logo {
+  height: 30px;
 }
