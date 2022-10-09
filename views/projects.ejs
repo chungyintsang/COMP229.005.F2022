@@ -1,9 +1,78 @@
 <!-- Student ID: 301216704
 Name: Chung Yin Tsang
 Date: 7 Oct 2022 -->
+
+<!-- header -->
 <% include partials/header.ejs %>
 
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %> page</p>
+<div>
+  <!-- Project 1. A container with two sections -->
+  <div class="projects-container">
+    <div class="proj-left-div">
+      <!-- a picture of the project -->
+      <img src="/images/project1.jpg" alt="Screen capture of the catch-the-bug game project" class="projpic">
+    </div>
 
+  <div class="proj-right-div">
+      <!-- descriptions of the project -->
+      <br>
+      <h3> <b> The Catch-the-bug Game </b></h3>
+      <p>
+        This project is a catch-the-bug game on a web page.
+        The player get scores by clicking on the red bug.
+        The red bug appears in different position.
+        The speed for it to change its position increases after the player obtains certain scores.
+        The player can reset the score and the speed.
+        The project is an individual assignment for the course COMP 125 Client-Side Web Development in Centennial.
+      </p>
+  </div>
+</div>
+
+<hr><br><br>
+<div>
+  <!-- Project 2. A container with two sections -->
+  <div class="projects-container">
+    <div class="proj-left-div">
+      <!-- a picture of the project -->
+      <img src="/images/project2.jpg" alt="Screen capture of the photo gallery project" class="projpic">
+    </div>
+
+  <div class="proj-right-div">
+      <!-- descriptions of the project -->
+      <br>
+      <h3> <b> The Photo Gallery </b></h3>
+      <p>
+        This project is a photo gallery on a web page.
+        The photo gallery shows a number of photos.
+        The user can click the left arrow to view the previous photo, or the right arrow to view the next one. 
+        The project is an individual assignment for the course COMP 125 Client-Side Web Development in Centennial.
+      </p>
+  </div>
+</div>
+
+<hr><br><br>
+
+<div>
+  <!-- Project 3. A container with two sections -->
+  <div class="projects-container">
+    <div class="proj-left-div">
+      <!-- a picture of the project -->
+      <img src="/images/project3.jpg" alt="Screen capture of the draw a table project" class="projpic">
+    </div>
+
+  <div class="proj-right-div">
+      <!-- descriptions of the project -->
+      <br>
+      <h3> <b> Draw A Table </b></h3>
+      <p>
+        This project is a web page to generate a table with specific size.
+        The user can enter the number of rows and columns and click the button to draw a table.
+        The project is an individual assignment for the course COMP 125 Client-Side Web Development in Centennial.
+      </p>
+  </div>
+</div>
+
+
+
+<!-- footer -->
 <% include partials/footer.ejs %>

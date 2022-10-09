@@ -1,9 +1,33 @@
 <!-- Student ID: 301216704
 Name: Chung Yin Tsang
 Date: 7 Oct 2022 -->
+
+<!-- header -->
 <% include partials/header.ejs %>
 
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %> page</p>
+<!-- content -->
 
+<!-- A conteiner with two sections -->
+<div class="container">
+  <!-- Left section: my introduction -->
+  <div class="about-left-div">
+    <h3>Tsang, Chung Yin</h3>
+    <p>I am currently a student of Software Engineering Technician in Centennial College. 
+      I have completed my bachelor's degree in Linguistics in The Chinese University of Hong Kong in 2017. 
+      I am a speaker of Cantonese, Mandarin, English and Japanese.
+    </p>
+
+    <br><br>
+    <h5>Click the below button to download the pdf file of my resume: <br><br>
+      <a href="/pdf/resume.pdf" class="btn btn-outline-dark">Resume</a>
+    </h5>
+  </div>
+  <!-- Right section: my photo -->
+  <div class="about-right-div">
+    <img src="/images/myphoto.jpg" alt="My photo" style="width: 100%;">
+  </div>
+</div>
+  
+
+<!-- footer -->
 <% include partials/footer.ejs %>

@@ -11,17 +11,119 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   text-align: center;
+  background-color: rgb(241, 249, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.footer {
+/* css for footer.ejs */
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here   */
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: rgb(243, 243, 243);
 }
 
+/* css for header.ejs */
 .logo {
   height: 30px;
 }
+
+.title{
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+/* css for index.ejs */
+.container {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-left-div {
+  width: 40%;
+}
+
+.home-right-div {
+  width: 60%;
+}
+
+.homepic {
+  width: 100%;
+}
+
+.home-about-div {
+  margin: 50px;
+}
+
+/* css for about.ejs */
+.about-left-div {
+  width: 70%;
+  padding-right: 30px;
+}
+
+.about-right-div {
+  width: 30%;
+}
+
+.about-left-div p {
+  text-align: justify;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* css for projects.ejs */
+.projects-container {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+.proj-left-div {
+  width: 60%;
+  padding-right: 10px;
+  margin: 20px;
+}
+
+.proj-right-div {
+  width: 40%;
+  margin-right: 40px;
+}
+
+.projpic {
+  width: 100%;
+}
+
+.proj-right-div p {
+  text-align: justify;
+  margin-top: 40px;
+}
+
+/* css for contact.ejs */
+.contact-content {
+  display: flex;
+  margin: 20px;
+}
+
+.accordion {
+  width: 40%;
+  padding: 10px;
+}
+
+.form {
+  width: 60%;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+}
+

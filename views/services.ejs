@@ -1,73 +1,53 @@
+<!-- Student ID: 301216704
+Name: Chung Yin Tsang
+Date: 7 Oct 2022 -->
+
+<!-- header -->
 <% include partials/header.ejs %>
 
-    <h1><%= title %></h1>
-
-    <% if(title == "Projects"){  %>
-        <div class="container mt-3">
-            <h2>Projects</h2>
-            
-            <table class="table table-striped">
-            <thead>
-                <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-                </tr>
-                <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-                </tr>
-                <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-    <% } else { %>  
-        
-        <div class="container mt-3">
-            <h2>Services</h2>
-            
-            <table class="table table-dark">
-            <thead>
-                <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-                </tr>
-                <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-                </tr>
-                <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
-                </tr>
-            </tbody>
-            </table>
-            <a href="/pdf/file-sample_PDF_150kB.pdf">PDF of my Services</a>
-        </div>
+<!-- A table of my services. Using bootstrap style -->
+<h5>The services I offer is shown below:</h5>
+<div class="container mt-3">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th colspan="3">Services</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><i class="fa-solid fa-keyboard"></i></td>
+          <td>general programming</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><br><br><br> <i class="fa-solid fa-folder-blank"></i></td>
+          <td><br><br><br> web development</td>
+          <td>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>GitHub</li>
+                <li>NodeJS</li>
+                <li>Express</li>
+                <li>EJS</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa-sharp fa-solid fa-database"></i></td>
+          <td>general databse</td>
+          <td>
+            <ul>
+                <li>SQL</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
   
-    <% } %>
   
-
+<!-- footer -->
 <% include partials/footer.ejs %>

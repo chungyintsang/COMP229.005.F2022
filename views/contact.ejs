@@ -1,9 +1,91 @@
 <!-- Student ID: 301216704
 Name: Chung Yin Tsang
 Date: 7 Oct 2022 -->
+
+<!-- header -->
 <% include partials/header.ejs %>
 
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %> page</p>
+<h2>Let's get in touch!</h2>
+<div class="contact-content">
+  <!-- A contact Accordion using bootstrap -->
+  <div id="accordion" class="accordion">
+    <p>There are a few ways to contact me: </p>
+    <div class="card">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+          Email
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+        <div class="card-body">
+          <a href="mailto: leila.tsang99@gmail.com"> leila.tsang99@gmail.com </a>
+        </div>
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+          Phone
+        </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          +1 (437) 982 4611
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+          Other
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          The contact form on this page
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The contact form using bootstrap-->
+  <div class="form">
+    <div class="container mt-3">
+      <form action="/">
+        <h2>Contact Form</h2>
+
+        <div class="mb-3">
+          <label for="firstname">Your First Name:</label>
+          <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" name="firstname" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="lastname">Your Last Name:</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Enter your last name" name="lastname" required>
+        </div>
+
+        <div class="mb-3 mt-3">
+          <label for="email">Your Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+        </div>
+
+        <div class="mb-3 mt-3">
+          <label for="phone">Your Phone Number:</label>
+          <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" name="phone">
+        </div>
+       
+        <label for="message">Your message:</label>
+        <textarea class="form-control" rows="5" id="message" name="message" required></textarea>
+
+        <a href="/">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
 <% include partials/footer.ejs %>
