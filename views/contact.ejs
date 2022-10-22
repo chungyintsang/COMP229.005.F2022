@@ -51,34 +51,38 @@ Date: 21 Oct 2022 -->
   </div>
 
   <!-- The contact form using bootstrap-->
-  <div class="form">
+  <div class="contactForm">
     <div class="container mt-3">
-      <form action="/">
+      <form action="/" class="contactForm">
         <h2>Contact Form</h2>
 
-        <div class="mb-3">
-          <label for="firstname">Your First Name:</label>
+        <div class="mb-3 form-group">
+          <label for="firstname">First Name:</label>
           <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" name="firstname" required>
         </div>
 
-        <div class="mb-3">
-          <label for="lastname">Your Last Name:</label>
+        <div class="mb-3 form-group">
+          <label for="lastname">Last Name:</label>
           <input type="text" class="form-control" id="lastname" placeholder="Enter your last name" name="lastname" required>
         </div>
 
-        <div class="mb-3 mt-3">
-          <label for="email">Your Email:</label>
+        <div class="mb-3 mt-3 form-group">
+          <label for="email">Email:</label>
           <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
         </div>
 
-        <div class="mb-3 mt-3">
-          <label for="phone">Your Phone Number:</label>
+        <div class="mb-3 mt-3 form-group">
+          <label for="phone">Phone Number:</label>
           <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" name="phone">
         </div>
        
-        <label for="message">Your message:</label>
-        <textarea class="form-control" rows="5" id="message" name="message" required></textarea>
+        <div class="form-group">
+          <label for="message">Messages:</label>
+          <textarea class="form-control" rows="5" id="message" name="message" required></textarea>
+        </div>
 
+
+        <br>
         <a href="/">
           <button type="submit" class="btn btn-primary">Submit</button>
         </a>

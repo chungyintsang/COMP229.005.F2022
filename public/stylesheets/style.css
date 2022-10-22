@@ -1,6 +1,6 @@
 /* Student ID: 301216704
 Name: Chung Yin Tsang
-Date: 7 Oct 2022 */
+Date: 21 Oct 2022 */
 
 html {
   position: relative;
@@ -37,9 +37,8 @@ footer {
 }
 
 /* css for index.ejs */
-.container {
+.homeContainer {
   display: flex;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -56,11 +55,15 @@ footer {
   width: 100%;
 }
 
-.home-about-div {
-  margin: 50px;
-}
 
 /* css for about.ejs */
+.aboutContainer {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about-left-div {
   width: 70%;
   padding-right: 30px;
@@ -118,12 +121,14 @@ footer {
   padding: 10px;
 }
 
-.form {
+.contactForm {
   width: 60%;
-}
-
-form {
   margin-left: auto;
   margin-right: auto;
 }
 
+
+/* css for forms in contact.ejs and add_update.ejs */
+.form-group{
+  text-align: left;
+}

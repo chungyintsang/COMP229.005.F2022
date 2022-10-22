@@ -8,7 +8,7 @@ Date: 21 Oct 2022 -->
 <!-- content -->
 
 <!-- A container with two sections -->
-<div class="container">
+<div class="homeContainer">
   <div class="home-left-div">
     <!-- a drawing from me -->
     <img src="/images/homepic.png" alt="my drawing" class="homepic">
@@ -20,16 +20,15 @@ Date: 21 Oct 2022 -->
       <img src="/images/logo.png" alt="logo" style="height: 70px;">
     </h2>
     <br><br>
-    <p>Welcome to my <%= title %> page!</p>
-  </div>
-</div>
-
-<div class="home-about-div">
-  <h4>To know more about me? </h4>
+    <h2>Welcome to my <%= title %> page!</h2>
+    <br><br>
+    <h4>To know more about me? </h4>
     <a href="/about">
       <button class="btn btn-outline-secondary btn-lg">~ Click Here ~</button>
     </a>
+  </div>
 </div>
+
 
 <!-- footer -->
 <% include partials/footer.ejs %>

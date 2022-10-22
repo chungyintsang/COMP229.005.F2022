@@ -1,0 +1,62 @@
+<!-- Student ID: 301216704
+Name: Chung Yin Tsang
+Date: 21 Oct 2022 -->
+
+<!-- header -->
+<% include ../partials/header.ejs %>
+
+<!-- content -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+            <h1><%= subTitle %></h1>
+
+            <!-- Form for login -->
+            <form method="POST">
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="usernameTextField">Username: </label>
+                    <input type="text" class="form-control"
+                    id="usernameTextField"
+                    name="username" 
+                    required>
+                </div>
+                <br />
+                               
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="passwordTextField">Password: </label>
+                    <input type="password" class="form-control"
+                    id="passwordTextField"
+                    name="password" 
+                    required>
+                </div>
+                <br />                   
+
+                <p><%= loginFailed %></p>
+
+                <!-- Buttons (Submit/Cancel) -->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Login
+                </button>
+                
+                <a href="/" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+                <br><br>
+                <p>No account? <a href="/users/signup"> Sign up </a> </p>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- footer -->
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,127 @@
+<!-- Student ID: 301216704
+Name: Chung Yin Tsang
+Date: 21 Oct 2022 -->
+
+<!-- header -->
+<% include ../partials/header.ejs %>
+
+<!-- content -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= subTitle %></h1>
+
+            <!-- Form for add or update -->
+            <form method="POST">
+                <!-- First Name -->
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= contact._id %>"
+                    >
+                    <label for="firstNameTextField">First Name (required)</label>
+                    <input type="text" class="form-control"
+                        id="firstNameTextField"
+                        placeholder="Enter Your First Name"
+                        name="firstName" 
+                        value="<%= contact.firstName %>"
+                        required>
+                </div>
+                <br />
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lastNameTextField">Last Name (required)</label>
+                    <input type="text" class="form-control"
+                    id="lastNameTextField"
+                    placeholder="Enter Your Last Name"
+                    name="lastName" 
+                    value="<%= contact.lastName %>"
+                    required>
+                </div>
+                <br />
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="emailTextField">Email (required)</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    placeholder="sample@sample.com"
+                    name="email" 
+                    value="<%= contact.email %>"
+                    required>
+                </div>
+                <br />
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="usernameTextField">Username (required)</label>
+                    <input type="text" class="form-control"
+                    id="usernameTextField"
+                    placeholder="Enter a Username"
+                    name="username" 
+                    value="<%= contact.username %>"
+                    required>
+                </div>
+                <br />
+                               
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="passwordTextField">Password (required)</label>
+                    <input type="password" class="form-control"
+                    id="passwordTextField"
+                    placeholder="Enter a Password"
+                    name="password" 
+                    value="<%= contact.password %>"
+                    required>
+                </div>
+                <br />
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="ageTextField">Age</label>
+                    <input type="number" class="form-control"
+                    id="ageTextField"
+                    placeholder="1"
+                    name="age" 
+                    value="<%= contact.age %>">
+                </div>
+                <br />      
+                
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="genderTextField">Gender</label>
+                    <select class="form-control"
+                    id="genderSelectField"
+                    name="gender" 
+                    value="<%= contact.gender %>">
+                        <option value=""></option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                <br />                     
+
+                <!-- Buttons (Submit/Cancel) -->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+                <br><br>
+                <p>Already have an account? <a href="/users/login"> Login </a> </p>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- footer -->
+<% include ../partials/footer.ejs %>

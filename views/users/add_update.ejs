@@ -1,0 +1,83 @@
+<!-- Student ID: 301216704
+Name: Chung Yin Tsang
+Date: 21 Oct 2022 -->
+
+<!-- header -->
+<% include ../partials/header.ejs %>
+
+<!-- content -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= subTitle %></h1>
+
+            <!-- Delete button for update page -->
+            <% if (title == "Update Contact") { %>
+                <a href="/users/delete/<%= contact._id %>" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                </a>
+            <% } %>
+
+
+            <!-- Form for add or update -->
+            <form method="POST">
+                <input type="hidden"
+                name="id"
+                value="<%= contact._id %>">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="contactNameTextField">Contact Name</label>
+                    <input type="text" class="form-control"
+                        id="contactNameTextField"
+                        placeholder="Enter Contact Name"
+                        name="contactName" 
+                        value="<%= contact.contactName %>"
+                        required>
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <label for="contactNumberTextField">Contact Number</label>
+                    <input type="text" class="form-control"
+                        id="contactNumberTextField"
+                        placeholder="Enter Contact Number"
+                        name="contactNumber" 
+                        value="<%= contact.contactNumber %>"
+                        required>
+                </div>
+                <br />
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="emailTextField">Email (required)</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    placeholder="sample@sample.com"
+                    name="email" 
+                    value="<%= contact.email %>"
+                    required>
+                </div>
+                <br />
+                               
+
+                <!-- Buttons (Submit/Cancel) -->
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/users/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- footer -->
+<% include ../partials/footer.ejs %>

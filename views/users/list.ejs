@@ -1,0 +1,55 @@
+<!-- Student ID: 301216704
+Name: Chung Yin Tsang
+Date: 21 Oct 2022 -->
+
+<!-- header -->
+<% include ../partials/header.ejs %>
+
+<!-- content -->
+<main class="container">
+    <div class="row">
+        <div>
+            <a href="/users/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i>
+                Add a new Contact
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <tr>
+                    <th class="text-center">Contact Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Email Address</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < ContactList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= ContactList[count].contactName %></td>
+                        <td class="text-center"><%= ContactList[count].contactNumber %></td>
+                        <td class="text-center"><%= ContactList[count].email %></td>
+                        
+                        <td class="text-center">
+                            <a href="/users/update/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/users/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+<!-- footer -->
+<% include ../partials/footer.ejs %>
