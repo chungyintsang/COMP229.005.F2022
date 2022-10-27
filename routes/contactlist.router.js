@@ -4,7 +4,7 @@
 
 var express = require('express');
 var router = express.Router();
-let contactController = require('../controllers/contact.controller');
+let contactController = require('../controllers/contactlist.controller');
 
 /* GET users listing. */
 router.get('/list', contactController.contactList);

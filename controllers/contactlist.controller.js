@@ -10,7 +10,7 @@ const { use } = require('../routes');
 
 //Function for contact list
 exports.contactList = function(req, res, next){
-    if (Users.loginStatus){
+    // if (Users.loginStatus){
         Contact.find((err, contactList)=>{
             if(err){
                 return console.error(err);
@@ -22,9 +22,9 @@ exports.contactList = function(req, res, next){
                 })
             }
         });
-    }else{
-        res.redirect('/users/login');
-    }
+    // }else{
+    //     res.redirect('/users/login');
+    // }
 
 }
 

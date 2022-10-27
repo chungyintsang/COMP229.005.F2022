@@ -12,7 +12,7 @@ Date: 21 Oct 2022 -->
             <h1><%= subTitle %></h1>
 
             <!-- Form for add or update -->
-            <form method="POST">
+            <form action="/users/login" method="POST">
                 <!-- First Name -->
                 <div class="form-group">
                     <input type="hidden"
@@ -72,6 +72,18 @@ Date: 21 Oct 2022 -->
                     id="passwordTextField"
                     placeholder="Enter a Password"
                     name="password" 
+                    value="<%= contact.password %>"
+                    required>
+                </div>
+                <br />
+
+                <!-- Password Confirm-->
+                <div class="form-group">
+                    <label for="passwordConfirmTextField">Confirm the Password (required)</label>
+                    <input type="passwordConfirm" class="form-control"
+                    id="passwordConfirmTextField"
+                    placeholder="Enter the Password again"
+                    name="passwordConfirm" 
                     value="<%= contact.password %>"
                     required>
                 </div>

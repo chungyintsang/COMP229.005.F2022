@@ -9,7 +9,7 @@ Date: 21 Oct 2022 -->
 <main class="container">
     <div class="row">
         <div>
-            <a href="/users/add" class="btn btn-primary align-self-end" role="button">
+            <a href="/contactlist/add" class="btn btn-primary align-self-end" role="button">
                 <i class="fas fa-plus-circle"></i>
                 Add a new Contact
             </a>
@@ -34,12 +34,12 @@ Date: 21 Oct 2022 -->
                         <td class="text-center"><%= ContactList[count].email %></td>
                         
                         <td class="text-center">
-                            <a href="/users/update/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <a href="/contactlist/update/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i>
                             </a>
                         </td>
                         <td class="text-center">
-                            <a href="/users/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
+                            <a href="/contactlist/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                         </td>

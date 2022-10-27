@@ -13,7 +13,7 @@ Date: 21 Oct 2022 -->
 
             <!-- Delete button for update page -->
             <% if (title == "Update Contact") { %>
-                <a href="/users/delete/<%= contact._id %>" class="btn btn-danger btn-sm">
+                <a href="/contactlist/delete/<%= contact._id %>" class="btn btn-danger btn-sm">
                     <i class="fas fa-trash-alt"></i>
                     Delete
                 </a>
@@ -67,7 +67,7 @@ Date: 21 Oct 2022 -->
                     Submit
                 </button>
                 
-                <a href="/users/list" class="btn btn-warning">
+                <a href="/contactlist/list" class="btn btn-warning">
                     <i class="fas fa-undo"></i> 
                     Cancel
                 </a>
