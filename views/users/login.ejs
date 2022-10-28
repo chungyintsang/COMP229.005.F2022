@@ -13,7 +13,7 @@ Date: 21 Oct 2022 -->
             <h1><%= subTitle %></h1>
 
             <!-- Form for login -->
-            <form method="POST">
+            <form action="/users/login" method="POST">
 
                 <!-- Username -->
                 <div class="form-group">
@@ -35,7 +35,12 @@ Date: 21 Oct 2022 -->
                 </div>
                 <br />                   
 
-                <p><%= loginFailed %></p>
+                <!-- Div for error message -->
+                <% for (var i in messages) { %>
+                <div class="flash">
+                    <%= messages[i] %>
+                </div>
+                <% } %>
 
                 <!-- Buttons (Submit/Cancel) -->
                 <button class="btn btn-primary" type="submit">

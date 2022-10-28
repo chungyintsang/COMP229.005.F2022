@@ -1,3 +1,7 @@
+// Student ID: 301216704
+// Name: Chung Yin Tsang
+// Date: 27 Oct 2022
+
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/users.model');

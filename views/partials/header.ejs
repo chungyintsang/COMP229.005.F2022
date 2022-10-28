@@ -88,6 +88,19 @@ Date: 21 Oct 2022 -->
                 Business Contacts List</a>
             </li>
    
+            
+            <% if (typeof userName == 'string' && userName) { %>
+            <!-- navbar item 'Logout' -->
+            <li class="nav-item">
+                <% if(title == "Logout"){ %>
+                <a class="nav-link active" href="/users/logout">
+                <% }else { %>
+                <a class="nav-link" href="/users/logout">
+                <% } %>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Logout [<%= userName %>]</a>
+            </li>
+            <% } else { %>
             <!-- navbar item 'Sign Up' -->
             <li class="nav-item">
                 <% if(title == "Sign Up"){ %>
@@ -98,10 +111,10 @@ Date: 21 Oct 2022 -->
                 <i class="fa-solid fa-user-plus"></i>
                 Sign Up</a>
             </li>
-            
+
             <!-- navbar item 'Login' -->
             <li class="nav-item">
-                <% if(title == "Business Contacts List"){ %>
+                <% if(title == "Login"){ %>
                 <a class="nav-link active" href="/users/login">
                 <% }else { %>
                 <a class="nav-link" href="/users/login">
@@ -109,6 +122,7 @@ Date: 21 Oct 2022 -->
                 <i class="fa-solid fa-right-to-bracket"></i>
                 Login</a>
             </li>
+            <% } %> 
 
             </ul>
         </nav>

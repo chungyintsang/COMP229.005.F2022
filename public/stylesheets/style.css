@@ -132,3 +132,8 @@ footer {
 .form-group{
   text-align: left;
 }
+
+/* css for signup.ejs */
+.flash {
+  color: red;
+}

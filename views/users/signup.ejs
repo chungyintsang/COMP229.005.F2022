@@ -11,20 +11,27 @@ Date: 21 Oct 2022 -->
         <div class="offset-md-3 col-md-6">
             <h1><%= subTitle %></h1>
 
+            <!-- Div for error message -->
+            <% for (var i in messages) { %>
+            <div class="flash">
+                <%= messages[i] %>
+            </div>
+            <% } %>
+
             <!-- Form for add or update -->
-            <form action="/users/login" method="POST">
+            <form method="POST" validate>
                 <!-- First Name -->
                 <div class="form-group">
                     <input type="hidden"
                         name="id"
-                        value="<%= contact._id %>"
+                        value="<%= user._id %>"
                     >
                     <label for="firstNameTextField">First Name (required)</label>
                     <input type="text" class="form-control"
                         id="firstNameTextField"
                         placeholder="Enter Your First Name"
                         name="firstName" 
-                        value="<%= contact.firstName %>"
+                        value="<%= user.firstName %>"
                         required>
                 </div>
                 <br />
@@ -36,7 +43,7 @@ Date: 21 Oct 2022 -->
                     id="lastNameTextField"
                     placeholder="Enter Your Last Name"
                     name="lastName" 
-                    value="<%= contact.lastName %>"
+                    value="<%= user.lastName %>"
                     required>
                 </div>
                 <br />
@@ -44,11 +51,11 @@ Date: 21 Oct 2022 -->
                 <!-- Email -->
                 <div class="form-group">
                     <label for="emailTextField">Email (required)</label>
-                    <input type="email" class="form-control"
+                    <input type="text" class="form-control"
                     id="emailTextField"
                     placeholder="sample@sample.com"
                     name="email" 
-                    value="<%= contact.email %>"
+                    value="<%= user.email %>"
                     required>
                 </div>
                 <br />
@@ -60,7 +67,7 @@ Date: 21 Oct 2022 -->
                     id="usernameTextField"
                     placeholder="Enter a Username"
                     name="username" 
-                    value="<%= contact.username %>"
+                    value="<%= user.username %>"
                     required>
                 </div>
                 <br />
@@ -72,7 +79,7 @@ Date: 21 Oct 2022 -->
                     id="passwordTextField"
                     placeholder="Enter a Password"
                     name="password" 
-                    value="<%= contact.password %>"
+                    value="<%= user.password %>"
                     required>
                 </div>
                 <br />
@@ -80,11 +87,11 @@ Date: 21 Oct 2022 -->
                 <!-- Password Confirm-->
                 <div class="form-group">
                     <label for="passwordConfirmTextField">Confirm the Password (required)</label>
-                    <input type="passwordConfirm" class="form-control"
+                    <input type="password" class="form-control"
                     id="passwordConfirmTextField"
                     placeholder="Enter the Password again"
                     name="passwordConfirm" 
-                    value="<%= contact.password %>"
+                    value="<%= user.password %>"
                     required>
                 </div>
                 <br />
@@ -96,7 +103,7 @@ Date: 21 Oct 2022 -->
                     id="ageTextField"
                     placeholder="1"
                     name="age" 
-                    value="<%= contact.age %>">
+                    value="<%= user.age %>">
                 </div>
                 <br />      
                 
@@ -106,7 +113,7 @@ Date: 21 Oct 2022 -->
                     <select class="form-control"
                     id="genderSelectField"
                     name="gender" 
-                    value="<%= contact.gender %>">
+                    value="<%= user.gender %>">
                         <option value=""></option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
