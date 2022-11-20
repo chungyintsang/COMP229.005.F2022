@@ -1,30 +1,25 @@
 // Student ID: 301216704
 // Name: Chung Yin Tsang
 // Date: 7 Oct 2022
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let usersController = require('../controllers/user');
+let passport = require('passport');
 
 /* GET users listing. */
-router.get('/julio', function(req, res, next) {
-  res.render(
-    'users', 
-    { 
-      title: 'Julio',
-      name: 'Julio' 
-    });
+router.get('/', function(req, res, next) {  
+  res.render('users', { 
+    title: 'Users',
+    userName: req.user ? req.user.username : ''
+  });
 });
 
-router.get('/john', function(req, res, next) {
-  res.render(
-    'users', 
-    { 
-      title: 'John Smith',
-      name: 'John Smith' 
-    });
-});
+router.get('/signup', usersController.renderSignup);
+router.post('/signup', usersController.signup);
 
-router.get('/Julio', function(req, res, next) {
-  res.send('Welcome Julio!');
-});
+router.get('/signin', usersController.renderSignin);
+router.post('/signin', usersController.signin);
+
+router.get('/signout', usersController.signout);
 
 module.exports = router;
