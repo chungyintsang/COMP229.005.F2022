@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-//Create a model class
+// Create a model class
 let inventoryModel = mongoose.Schema(
     {
         item: String,
