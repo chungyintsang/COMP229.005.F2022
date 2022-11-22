@@ -1,6 +1,6 @@
 exports.home = function(req, res, next) {
   //Backend: no render page
-  res.status(200).json(
+  res.json(
     {
       success: true,
       message: "This is the home endpoint"
