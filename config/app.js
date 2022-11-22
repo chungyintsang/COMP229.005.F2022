@@ -1,13 +1,11 @@
+//Backend: not require 'cookie-parser' 'express-session' 'connect-flash'
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 let compress = require('compression');
 let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
-let session = require('express-session');
-let flash = require('connect-flash');
 let passport = require('passport');
 
 var indexRouter = require('../routes/index');
@@ -16,28 +14,24 @@ var inventoryRouter = require('../routes/inventory');
 
 var app = express();
 
-app.use(session({
-  saveUninitialized: true,
-  resave: true,
-  secret: "sessionSecret"
-}));
+// Backend: no session required
 
 
-// view engine setup
-app.set('views', path.join(__dirname, '../views'));
-app.set('view engine', 'ejs');
+// Backend: no view engine setup
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.static(path.join(__dirname, '../node_modules')));
+// Backend: No cookieParser
+
+//Backend: no static path
+
 
 // Sets up passport
-app.use(flash());
+// Backend: No flash required, no passport.session
 app.use(passport.initialize());
-app.use(passport.session());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -56,7 +50,13 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // Backend: cannot render the error page in views
+  // res.render('error');
+  res.json(
+    {
+      success: false,
+      message: err.message
+    });
 });
 
 module.exports = app;
