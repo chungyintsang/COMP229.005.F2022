@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+let passport = require('passport');
+
 let inventoryController = require('../controllers/inventory');
 
 // helper function for guard purposes
@@ -19,17 +21,16 @@ function requireAuth(req, res, next)
 router.get('/list', inventoryController.inventoryList);
 
 // Routers for edit
-router.get('/edit/:id', requireAuth, inventoryController.displayEditPage);
-router.post('/edit/:id', requireAuth, inventoryController.processEditPage);
+//Backend: no diaplay edit page function
+router.put('/edit/:id', passport.authenticate('tokencheck', {session: false}), inventoryController.processEdit);
 
 // Delete
-router.get('/delete/:id', requireAuth, inventoryController.performDelete);
+router.delete('/delete/:id', passport.authenticate('tokencheck', {session: false}), inventoryController.performDelete);
 
 
-/* GET Route for displaying the Add page - CREATE Operation */
-router.get('/add', requireAuth, inventoryController.displayAddPage);
+/*Backend: no Route for displaying the Add page
 
 /* POST Route for processing the Add page - CREATE Operation */
-router.post('/add', requireAuth, inventoryController.processAddPage);
+router.post('/add', passport.authenticate('tokencheck', {session: false}), inventoryController.processAdd);
 
 module.exports = router;
