@@ -116,3 +116,25 @@ module.exports.signin = function(req, res, next){
     }
   )(req, res, next);
 }
+
+exports.myprofile = async function(req, res, next){
+
+  try {
+    
+    let id = req.payload.id;
+    // select: tell mongodb which field I want to see
+    let me = await User.findById(id).select('firstName lastName email username admin created');
+
+    res.status(200).json(me)
+
+  } catch (error) {
+    console.log(error);
+      return res.status(400).json(
+          { 
+              success: false, 
+              message: getErrorMessage(error)
+          }
+      );
+  }
+
+}
