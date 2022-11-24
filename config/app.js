@@ -7,6 +7,7 @@ let compress = require('compression');
 let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
 let passport = require('passport');
+let cors = require('cors');
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
@@ -19,6 +20,9 @@ var app = express();
 
 // Backend: no view engine setup
 
+// Enable cors
+app.use(cors());
+app.options('*', cors());
 
 app.use(logger('dev'));
 app.use(express.json());
