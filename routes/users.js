@@ -14,7 +14,7 @@ let authController = require('../controllers/auth');
 //   });
 // });
 
-router.get('/me', authController.requireAuth, usersController.myprofile)
+router.get('/me', authController.requireAuth, usersController.myprofile);
 
 router.post('/signup', usersController.signup);
 
